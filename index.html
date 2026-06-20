@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-width=1.0">
-    <title>Portfolio | Engineering & Visuals</title>
+    <title>Picography | Visual Stories</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@700&family=Inter:wght@300;500;700&display=swap" rel="stylesheet">
     
     <style>
-        /* Core Variables: Red, Black, White Theme */
+        /* Core Theme: Red, Black, White */
         :root {
             --bg-primary: #ffffff;
             --bg-secondary: #f8f9fa;
@@ -166,7 +166,7 @@
             left: 0;
         }
 
-        /* About Grid */
+        /* About Section */
         .about-content {
             display: grid;
             grid-template-columns: 1fr 1fr;
@@ -180,7 +180,7 @@
             margin-bottom: 20px;
         }
 
-        /* Portfolio Grid */
+        /* Photo Gallery Grid */
         .grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
@@ -203,13 +203,11 @@
         }
 
         .card-img {
-            height: 250px;
-            background-color: #f1f3f5;
+            height: 300px; /* Taller for photography */
+            background-color: #111;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 3rem;
-            color: #dee2e6;
             overflow: hidden;
         }
 
@@ -218,10 +216,12 @@
             height: 100%;
             object-fit: cover;
             transition: transform 0.6s ease;
+            opacity: 0.9;
         }
 
         .card:hover .card-img img {
             transform: scale(1.05);
+            opacity: 1;
         }
 
         .card-content {
@@ -249,7 +249,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: rgba(0, 0, 0, 0.6);
+            background: rgba(0, 0, 0, 0.8);
             backdrop-filter: blur(8px);
             z-index: 2000;
             display: flex;
@@ -306,7 +306,7 @@
             font-size: 0.9rem;
         }
 
-        /* Scroll Reveal Classes */
+        /* Scroll Reveal */
         .reveal {
             opacity: 0;
             transform: translateY(40px);
@@ -336,7 +336,7 @@
         @media (max-width: 768px) {
             header h1 { font-size: 3rem; }
             .about-content { grid-template-columns: 1fr; }
-            nav ul { display: none; } /* Simple mobile hiding for brevity */
+            nav ul { display: none; }
         }
     </style>
 </head>
@@ -347,73 +347,73 @@
         <ul>
             <li><a href="#home">Home</a></li>
             <li><a href="#about">About</a></li>
-            <li><a href="#projects">Projects</a></li>
+            <li><a href="#gallery">Gallery</a></li>
         </ul>
     </nav>
 
     <header id="home">
-        <h1>Engineering.<br><span>Visuals.</span> Code.</h1>
-        <p>A final-year engineering student blending technical precision with creative vision. Specializing in full-stack development, hardware IoT, and professional photography.</p>
-        <a href="#projects" class="btn-primary">View Projects</a>
+        <h1>Capture the<br><span>Moment.</span></h1>
+        <p>Professional photographer and video editor specializing in high-energy event coverage, cinematic night photography, and striking visual storytelling.</p>
+        <a href="#gallery" class="btn-primary">View My Work</a>
     </header>
 
     <section id="about" class="bg-grey">
         <div class="reveal">
-            <h2 class="section-title">About Me</h2>
+            <h2 class="section-title">The Photographer</h2>
             <div class="about-content">
                 <div class="about-text">
-                    <p>I am an engineering student currently completing my studies at Vel Tech University in Morai, near Avadi. My work lives at the intersection of technical problem-solving and creative media.</p>
-                    <p>As a developer, I build full-stack web applications and hardware scripts. As a creative, I am a photographer and video editor, serving on the core team as Photography Secretary for major campus festivals.</p>
+                    <p>Based in Morai, near Avadi, I am a dedicated photographer and visual artist with a sharp eye for high-contrast, cinematic framing.</p>
+                    <p>Whether I am shooting fast-paced night events, capturing the raw intensity of wildlife, or documenting high-profile campus visits, my goal is to freeze time and deliver striking, professional-grade imagery.</p>
                 </div>
                 <div style="background: var(--text-main); height: 100%; min-height: 300px; display: flex; align-items: center; justify-content: center; color: white;">
-                    [Your Profile Image Here]
+                    [Insert Your Photo Here]
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="projects">
+    <section id="gallery">
         <div class="reveal">
-            <h2 class="section-title">Featured Work</h2>
+            <h2 class="section-title">Selected Galleries</h2>
             <div class="grid">
                 
                 <div class="card" onclick="openModal('modal-1')">
                     <div class="card-img">
-                        <img src="" alt="BLDC Motor Project" style="background: #333;">
+                        <img src="" alt="LAVAZA Photography" style="background: #222;">
                     </div>
                     <div class="card-content">
-                        <p class="card-category">Hardware / IoT</p>
-                        <h3 class="card-title">IoT Predictive Fault Detection</h3>
+                        <p class="card-category">Event Photography</p>
+                        <h3 class="card-title">LAVAZA 2026 Core Team</h3>
                     </div>
                 </div>
 
                 <div class="card" onclick="openModal('modal-2')">
                     <div class="card-img">
-                        <img src="" alt="LAVAZA Event Photography" style="background: #444;">
+                        <img src="" alt="Celebrity Campus Visits" style="background: #333;">
                     </div>
                     <div class="card-content">
-                        <p class="card-category">Photography & Design</p>
-                        <h3 class="card-title">LAVAZA 2026 & Frame It Right</h3>
+                        <p class="card-category">VIP & Portraiture</p>
+                        <h3 class="card-title">Celebrity Campus Visits</h3>
                     </div>
                 </div>
 
                 <div class="card" onclick="openModal('modal-3')">
                     <div class="card-img">
-                        <img src="" alt="Web Development" style="background: #555;">
+                        <img src="" alt="Wildlife Photography" style="background: #444;">
                     </div>
                     <div class="card-content">
-                        <p class="card-category">Full-Stack Dev</p>
-                        <h3 class="card-title">Responsive E-Commerce Cart</h3>
+                        <p class="card-category">Nature & Wildlife</p>
+                        <h3 class="card-title">Wildlife & Telephoto</h3>
                     </div>
                 </div>
 
                 <div class="card" onclick="openModal('modal-4')">
                     <div class="card-img">
-                        <img src="" alt="Prosthetic Hand" style="background: #666;">
+                        <img src="" alt="Frame It Right Contest" style="background: #555;">
                     </div>
                     <div class="card-content">
-                        <p class="card-category">Engineering Design</p>
-                        <h3 class="card-title">Prosthetic Hand Fabrication</h3>
+                        <p class="card-category">Contest & Branding</p>
+                        <h3 class="card-title">"Frame It Right" Exhibition</h3>
                     </div>
                 </div>
 
@@ -422,17 +422,17 @@
     </section>
 
     <footer>
-        <p>&copy; 2026. Designed and developed with precision.</p>
+        <p>&copy; 2026 Picography. All images belong to their respective creator.</p>
     </footer>
 
     <div id="modal-1" class="modal-overlay" onclick="closeModal(event, 'modal-1')">
         <div class="modal-content">
             <span class="close-btn" onclick="closeModalForce('modal-1')">&times;</span>
             <div class="modal-body">
-                <p class="tech-stack">Sensors • Python • IoT Frameworks</p>
-                <h2>IoT-Based Predictive Fault Detection on BLDC Motors</h2>
-                <p>A final-year engineering project focused on drone reliability. Engineered a full technical script and integrated a sensor suite to predict and detect faults in Brushless DC motors before catastrophic failure occurs during flight.</p>
-            </div>
+                <p class="tech-stack">Night Photography • High-Energy Events • Core Team</p>
+                <h2>LAVAZA 2026 Event Coverage</h2>
+                <p>Served as the Photography Secretary for the core team, handling comprehensive event documentation, dynamic night shots, and visual branding for the festival.</p>
+                </div>
         </div>
     </div>
 
@@ -440,9 +440,9 @@
         <div class="modal-content">
             <span class="close-btn" onclick="closeModalForce('modal-2')">&times;</span>
             <div class="modal-body">
-                <p class="tech-stack">Event Photography • Graphic Design • Branding</p>
-                <h2>LAVAZA 2026 Core Team</h2>
-                <p>Served as the Photography Secretary for the LAVAZA 2025-26 tech-cultural festival. Responsibilities included organizing the "Frame It Right" photography contest for Tantraz Tech Fest, designing promotional posters without countdowns, and documenting high-profile celebrity campus visits.</p>
+                <p class="tech-stack">VIP Coverage • Portraiture • Crowds</p>
+                <h2>Celebrity Documentation</h2>
+                <p>Official photographer capturing live appearances and intimate portraits during campus visits from notable figures including Tamannaah Bhatia and Malvika Manoj.</p>
             </div>
         </div>
     </div>
@@ -451,9 +451,9 @@
         <div class="modal-content">
             <span class="close-btn" onclick="closeModalForce('modal-3')">&times;</span>
             <div class="modal-body">
-                <p class="tech-stack">PHP • XAMPP • UI/UX Design</p>
-                <h2>Responsive E-Commerce Interface</h2>
-                <p>Developed a full-stack e-commerce web application featuring a state-persistent shopping cart. Built utilizing PHP and XAMPP to ensure seamless backend database management and a smooth, responsive user interface.</p>
+                <p class="tech-stack">Mirrorless Systems • Telephoto Lenses • Nature</p>
+                <h2>Wildlife & Telephoto Series</h2>
+                <p>A collection of high-contrast wildlife imagery utilizing advanced mirrorless systems (Nikon, Sony, Canon) and specialized rented telephoto setups to capture animals in their natural habitats.</p>
             </div>
         </div>
     </div>
@@ -462,9 +462,9 @@
         <div class="modal-content">
             <span class="close-btn" onclick="closeModalForce('modal-4')">&times;</span>
             <div class="modal-body">
-                <p class="tech-stack">Hardware Fabrication • Documentation</p>
-                <h2>Fabrication of a Prosthetic Hand</h2>
-                <p>A minor engineering project focused on the design and physical fabrication of a functional prosthetic hand, tracking rigorous weekly progress reports through the design phases.</p>
+                <p class="tech-stack">Curation • Organization • Graphic Design</p>
+                <h2>"Frame It Right" Exhibition</h2>
+                <p>Organized and executed the "Frame It Right" photography contest for Tantraz Tech Fest, handling everything from the curation of submissions to designing the promotional branding and typography.</p>
             </div>
         </div>
     </div>
@@ -488,7 +488,7 @@
         // Modal Logic
         function openModal(modalId) {
             document.getElementById(modalId).classList.add('active');
-            document.body.style.overflow = 'hidden'; // Prevent background scrolling
+            document.body.style.overflow = 'hidden'; 
         }
 
         // Close when clicking outside the box
